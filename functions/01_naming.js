@@ -8,10 +8,13 @@ function namedFunctions() {
   // ¿Que raro? No falla al ejecutar la función antes de declararla ¿Por qué?
   
   normalFunction()
+
+  //console.log(normalFunction.name)
   
   // Función declarada de la forma "clásica"
   function normalFunction() {
     // ... acá va la lógica
+    console.log('testing')
   }
   
   // No podemos hacer esto debido a que la propiedad name es de solo lectura, pero intentarlo no provocará error
@@ -27,7 +30,7 @@ function namedFunctions() {
 
 //  Sin asignar provoca error de sintaxis. Prueba descomentando la siguiente línea
 
-//  function () {}
+// var algo = function () {}
 
 //  Escrita como "expresión" no provoca error
 //  Analizaremos luego que son las expresiones
@@ -40,13 +43,13 @@ function namedFunctions() {
   
   //  anonymous()
   
-  var anonymous = function () {}
+  //var anonymousFunction = function () {}
 
   return {
     normalFunction: normalFunction,
-    anonymousFunction: anonymous,
+    //anonymousFunction: anonymousFunction,
     // lo anterior es igual a esto por eso pasa la prueba
-    // anonymousFunction: function () {}
+     anonymousFunction: function () {}
   }
 }
 
@@ -94,7 +97,7 @@ function expressionFunctions() {
   */
 
   // return function(){}
-  return function named(){}
+  return function (){}
 }
 
 module.exports = {

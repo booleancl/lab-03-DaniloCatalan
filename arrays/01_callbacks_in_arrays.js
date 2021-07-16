@@ -15,15 +15,29 @@ function filter(array, callback){
 	const newArray = [];
 
 //  SOLUCIÓN
-// 	for (let index = 0; index < arrayLength; index++) {
-//    // ACÁ UTILIZAMOS EL CALLBACK
-// 		const isIncluded = callback(array[index], index, array);     // ACÁ UTILIZAMOS EL RESULTADO DEL CALLBACK PARA REALIZAR EL FILTRO 
-//    if (isIncluded) {
-// 			newArray.push(array[index]);
-// 		}
-//   }
+	for (let index = 0; index < arrayLength; index++) {
+   // ACÁ UTILIZAMOS EL CALLBACK
+		const isIncluded = callback(array[index], index, array);     // ACÁ UTILIZAMOS EL RESULTADO DEL CALLBACK PARA REALIZAR EL FILTRO 
+   if (isIncluded) {
+			newArray.push(array[index]);
+		}
+  }
   return newArray;
 }
+// var numeros = [1,2,3,4,5,6,7,8,10]
+
+// var result1 = filter(numeros, function(num) {
+//   return num < 5
+// })
+// console.log(result1)
+// var result2 = filter(numeros, function(num) {
+//   return num > 5
+// })
+// console.log(result2)
+// var result3 = filter(numeros, function(num) {
+//   return num === 5
+// })
+// console.log(result3)
 
 /*
   2 - DESAFÍO PARA LOS ESTUDIANTES
@@ -34,16 +48,24 @@ function filter(array, callback){
   }
   // map debe devolver un arreglo con los valores modificados
   map(pointsList, modifyValue)
+  [1,2,3,4,5] el resultado debiera ser [2,4,6,8,10]
 */
 function map(array, callback){
   const arrayLength = array.length;
 	const newArray = [];
 
 	for (let index = 0; index < arrayLength; index++) {
-    // ACÁ UTILIZAMOS EL CALLBACK
+    newArray.push(callback(array[index]))
   }
   return newArray;
 }
+
+var numeros = [1,2,3,4,5]
+var resultado = map(numeros, function(numero) {
+  return numero*2
+})
+
+// var users =[{}]
 
 module.exports = {
   filter: filter,
