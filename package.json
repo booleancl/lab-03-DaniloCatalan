@@ -1,0 +1,24 @@
+{
+  "name": "javascript-lab03",
+  "version": "1.0.0",
+  "description": "## Módulo 3: Repaso de fundamentos de Javascript. Conocer la sintáxis fundamental de Javascript en un contexto de propósito general. ## Unidad 3: Funciones y Arreglos",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "test:ci": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/booleancl/javascript-lab03.git"
+  },
+  "keywords": [],
+  "author": "Academia Boolean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/booleancl/javascript-lab03/issues"
+  },
+  "homepage": "https://github.com/booleancl/javascript-lab03#readme",
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
+}
